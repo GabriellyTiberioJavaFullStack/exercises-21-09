@@ -1,6 +1,11 @@
 alert('Você quer calcular quanto vai pagar pelo produto adquirido? Aperte OK.')
 
-const preçoproduto = parseFloat(prompt('Qual o preço de etiqueta do produto?'))
+let preçoproduto = parseFloat(prompt('Qual o preço de etiqueta do produto?'))
+
+while (isNaN(preçoproduto) || preçoproduto <= 0) {
+    alert('O preço digitado é inválido. Por favor, informe o preço apenas com números, sem carácteres especiais (letras ou acentos)')
+    preçoproduto = parseFloat(prompt('Qual o preço do produto?')) 
+}
 
 const mensagem = ` 
 Informe o método de pagamento:
@@ -8,12 +13,17 @@ Digite 1 para pagamento em dinheiro.
 Digite 2 para pagamento em cheque.
 Digite 3 para pagamento em cartão.
 `
-const metododepag = prompt(mensagem)
+
+let metododepag = prompt(mensagem)
+
+while (isNaN(metododepag) || metododepag < 1 || metododepag > 3) {
+    alert('Método de pagamento inválido. Selecione novamente')
+    metododepag = parseInt(prompt(mensagem))
+}
 
 console.log(preçoproduto)
 console.log(metododepag)
 
-// || = OU
 if (metododepag == 1 || metododepag == 2 ) { 
     const preçofinal = preçoproduto * 0.9
     alert(`O preço final do pagamento é ${preçofinal} reais.`)
