@@ -1,0 +1,26 @@
+<!-- Escreva um algoritmo que leia um valor inicial A e imprima o seu fatorial -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio11</title>
+</head>
+<body>
+    <script>
+        let num = parseInt(prompt('Informe um número inteiro'))
+
+        let fatorial = 1
+
+        for (let i = 1; i < num; i++) {
+
+            fatorial = fatorial * (i + 1)
+
+        document.write(`<p> ${num}! = ${fatorial} </p>`)
+        }
+    </script>
+</body>
+</html>
+

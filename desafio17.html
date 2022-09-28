@@ -1,0 +1,24 @@
+<!-- Sabendo que latão é constituído de 70% de cobre e 30% de zinco, indique a quantidade de
+cada um desses componentes para se obter uma certa quantidade de latão (requerida pelo
+usuário). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio17</title>
+</head>
+<body>
+    <script>
+
+        let qntdlatão = parseFloat(prompt(`Insira quantos ml tem o seu latão.`))
+
+        let cobre = qntdlatão * 0.7
+        let zinco = qntdlatão * 0.3
+
+        document.write(`<p> Seu latão possui ${cobre}ml de cobre e ${zinco}ml de zinco. </p>`)
+    </script>
+</body>
+</html>

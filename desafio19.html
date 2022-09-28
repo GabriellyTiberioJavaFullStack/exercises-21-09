@@ -1,0 +1,147 @@
+<!-- Uma Cia de pulverização utiliza avião para pulverizar lavouras. Os custos de
+pulverização dependem do tipo de praga e da área a ser contratada conforme a tabela:
+Tipo 1 – ervas daninhas R$ 50,00 por acre;
+Tipo 2 – gafanhotos R$ 100,00 por acre;
+Tipo 3 – broca R$ 150,00 por acre;
+Tipo 4 – todos acima R$ 250,00 por acre.
+Se a área a ser pulverizada for superior a 1000 acres, o fazendeiro tem um desconto de
+5%. 
+Em adição, qualquer fazendeiro cujo custo for maior do que R$ 750,00 tem um desconto de 10% sobre o valor que ultrapassar os R$ 750,00. 
+Caso ambos os descontos se aplicam o da área é calculado antes.
+
+Fazer um algoritmo que leia: o tipo de pulverização
+(1 a 4) e área a ser pulverizada; e imprima o valor a ser pago. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio19</title>
+</head>
+<body>
+    <script>
+        let tipopraga = parseInt(prompt(`Qual o tipo de praga? 
+        Digite 1 para Ervas daninas.
+        Digite 2 para Gafanhotos.
+        Digite 3 para Broca.
+        Digite 4 para Todos `))
+        console.log(tipopraga)
+
+        while (isNaN(tipopraga) || tipopraga < 1 || tipopraga > 4) {
+        alert(`Tipo de praga inválido. Selecione novamente`)
+        tipopraga = parseInt(prompt(`Qual o tipo de praga? 
+        Digite 1 para Ervas daninas.
+        Digite 2 para Gafanhotos.
+        Digite 3 para Broca.
+        Digite 4 para Todos `)) }
+                                                 
+
+        if (tipopraga == 1){
+            alert(`Você selecionou Ervas daninas!`)
+            let area = parseFloat(prompt (`Quantos acres?`))
+
+            if (area > 1000) {
+                alert(`Preço a pagar por ${area} acres.`)
+                let preco = (50 * area) * 0.95
+                let apagar = (preco - 750) * 0.90 + 750
+                alert(`Você pagará ${apagar} reais.`)
+            }
+
+            else {
+                alert(`Preço a pagar por ${area} acres.`)
+                if (area >= 15) {
+                    preco = 50 * area
+                    let apagar = (preco - 750) * 0.90 + 750
+                    alert(`Você pagará ${apagar} reais.`)
+                }
+                else {
+                    preco = 50 * area
+                    let apagar = preco
+                    alert(`Você pagará ${apagar} reais.`)
+                }
+            }
+        }
+
+        else if (tipodepraga == 2){
+            alert(`Você selecionou Gafanhotos`)
+            let area = parseFloat(prompt (`Quantos acres?`))
+
+            if (area > 1000) {
+                alert(`Preço a pagar por ${area} acres.`)
+                let preco = (100 * area) * 0.95
+                let apagar = (preco - 750) * 0.90 + 750
+                alert(`Você pagará ${apagar} reais.`)
+            }
+
+            else {
+                alert(`Preço a pagar por ${area} acres.`)
+                if (area >= 7.5) {
+                    preco = 100 * area
+                    let apagar = (preco - 750) * 0.90 + 750
+                    alert(`Você pagará ${apagar} reais.`)
+                }
+                else {
+                    preco = 100 * area
+                    let apagar = preco
+                    alert(`Você pagará ${apagar} reais.`)
+                }
+            }
+        }
+        else if (tipodepraga == 3){
+            alert(`Você selecionou Broca`)
+            let area = parseFloat(prompt (`Quantos acres?`))
+
+            if (area > 1000) {
+                alert(`Preço a pagar por ${area} acres.`)
+                let preco = (150 * area) * 0.95
+                let apagar = (preco - 750) * 0.90 + 750
+                alert(`Você pagará ${apagar} reais.`)
+            }
+
+            else {
+                alert(`Preço a pagar por ${area} acres.`)
+                if (area >= 5) {
+                    preco = 150 * area
+                    let apagar = (preco - 750) * 0.90 + 750
+                    alert(`Você pagará ${apagar} reais.`)
+                }
+                else {
+                    preco = 150 * area
+                    let apagar = preco
+                    alert(`Você pagará ${apagar} reais.`)
+                }
+            }
+        }
+
+        else if (tipodepraga == 4){
+            alert(`Você selecionou Todos`)
+            let area = parseFloat(prompt (`Quantos acres?`))
+
+            if (area > 1000) {
+                alert(`Preço a pagar por ${area} acres.`)
+                let preco = (250 * area) * 0.95
+                let apagar = (preco - 750) * 0.90 + 750
+                alert(`Você pagará ${apagar} reais.`)
+            }
+
+            else {
+                alert(`Preço a pagar por ${area} acres.`)
+                if (area >= 3) {
+                    preco = 250 * area
+                    let apagar = (preco - 750) * 0.90 + 750
+                    alert(`Você pagará ${apagar} reais.`)
+                }
+                else {
+                    preco = 250 * area
+                    let apagar = preco
+                    alert(`Você pagará ${apagar} reais.`)
+                }
+            }
+        }
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!-- Faça um programa em Javascript que leia um vetor com dez números reais, calcule e mostre a quantidade de números negativos e a soma dos números positivos desse vetor. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const nums = []
+        
+        // leia o vetor
+        for(let i=1; i <= 10; i++){
+        const numero = parseInt(prompt(`Digite o ${i}° número `))
+        nums.push(numero) }
+            
+        
+        const neg = []
+        const pos = []
+
+        for (let número of nums){
+            if (número < 0 ) {
+                neg.push(número)
+            }
+            else {
+                pos.push(número)
+            }
+         }
+
+
+         soma = 0 
+         for (let número of nums){
+            if (número >= 0 ) {
+                soma = soma + número
+            }
+         }
+        
+alert(`Os números positivos são ${pos}`)
+alert(`Os números negativos são ${neg}`)
+alert(`A soma dos números positivos é igual a ${soma}`)
+
+    </script>
+
+</body>
+</html>
+
+<!-- 1,0,-8,-2,-4,-7,-2,9,-23,-99 -->

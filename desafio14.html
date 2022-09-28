@@ -1,0 +1,33 @@
+<!-- Crie um código que receba 3 valores do comprimento de um triângulo e depois mostre um alert informando se o triângulo é equilátero, isóceles ou escaleno. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio14</title>
+</head>
+<body>
+    <script>
+
+        let comp1 = parseFloat(prompt('Qual o comprimento do 1° lado do triângulo?'))
+
+        let comp2 = parseFloat(prompt('Qual o comprimento do 2° lado do triângulo?'))
+
+        let comp3 = parseFloat(prompt('Qual o comprimento do 3° lado do triângulo?'))
+
+        if (comp1 == comp2 & comp1 == comp3) {
+            alert(`Esse triângulo é equilátero.`)}
+        
+
+        else if (comp1 == comp2 & comp1 != comp3 || comp1 == comp3 & comp1 != comp2 || comp2 == comp3 & comp2
+        != comp1) {
+            alert(`Esse triângulo é isóceles.`)}
+
+        else {
+            alert(`Esse triângulo é escaleno.`)}  
+
+    </script>
+</body>
+</html>

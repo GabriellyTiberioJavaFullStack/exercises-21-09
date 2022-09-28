@@ -1,0 +1,26 @@
+<!-- Escreva um algoritmo que leia um valor inicial A e uma razão R e imprima uma seqüência em
+P.G. contendo 10 valores. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let A1 = parseInt(prompt(`Informe o valor inicial(A1).`))
+
+        let R = parseInt(prompt(`Informe a razão(R).`))
+
+
+        for (i = 1; i <= 10; i++){
+            sequência = A1 * (R ** (i-1) )
+
+            document.write(`<p> ${sequência} </p>`)
+        }
+    </script>
+</body>
+</html>

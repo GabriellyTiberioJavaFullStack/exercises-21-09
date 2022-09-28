@@ -1,0 +1,51 @@
+<!-- Faça um programa em Javascript que leia um vetor de seis elementos numéricos inteiros, calcule e mostre:
+a) A quantidade de números pares
+b) Quais os números pares
+c) A quantidade de números ímpares
+d) Quais os números ímpares  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //criar um novo array
+    const nums = []
+
+    //criar um loop que execute 6 vezes
+    for(let i=1; i <= 6; i++) {
+
+    const n = parseInt(prompt(`Digite o ${i}° número `))
+    nums.push(n)
+}
+
+    //separar os pares dos ímpares
+    const pares = []
+    const ímpares = []
+
+    //percorrer o array com os números informados
+    //criar um variável que guardará os valores de cada posição do array
+    for (let número of nums) {
+    // seperar os valores pares dos ímpares, colocando cada valor no seu respectivo array
+
+    // se o resto da divisão(%) for igual a 0, o número é par
+    if (número % 2 == 0) {
+        pares.push(número)
+    }
+    else {
+        ímpares.push(número)
+    }
+}
+
+alert(`Nós temos ${pares.length} valores pares: ${pares.join(', ')}`)
+
+alert(`Nós temos ${ímpares.length} valores ímpares: ${ímpares.join(', ')}`)
+    </script>
+</body>
+</html>
+

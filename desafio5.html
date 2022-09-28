@@ -1,0 +1,41 @@
+<!-- Crie um algoritmo para ler N números, some-os e faça a média entre os números -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Desafio5</title>
+</head>
+<body>
+   <script>
+   // quantidade e valor dos numeros
+     const qtdnum = parseInt(prompt('Informe a quantidade de números')) 
+
+   //  ler cada numero
+     const num = []
+
+
+     for (let i=0; i < qtdnum; i++) {
+       let valor = parseFloat(prompt('Informe um número'))
+       num[i] = valor
+     }
+
+   // soma dos números  
+     let soma = 0
+
+     for (let valor of num) {
+     soma = soma + valor
+   }
+
+   // média
+    media = soma / qtdnum
+
+    alert (`A media desses numeros é igual a ${media}`)
+
+     alert(`A soma desses valoras é igual a ${soma}`)
+   </script>
+</body>
+</html>
+

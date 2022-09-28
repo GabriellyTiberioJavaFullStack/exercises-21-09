@@ -1,0 +1,32 @@
+<!-- Faça um algoritmo para adicionar 20 valores em um array e depois imprima-os no HTML. Evite que o array possua valores duplicados. --> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nums = []
+
+        for(let i=1; i <= 20; i++){
+          let numero = parseInt(prompt(`Digite o ${i}° número. `))
+          nums.push(numero)
+          nums[i] = numero
+
+          for(let j=1; j < i; j++) {
+            if (nums[i] == nums[j] ){
+                alert("Este número já foi inserido, escreva um diferente, por favor.")
+                i--
+            }
+          }
+
+          document.write(`<p> ${numero} </p>`)
+        }
+
+    </script>
+</body>
+</html>
