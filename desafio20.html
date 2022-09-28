@@ -10,16 +10,11 @@
 </head>
 <body>
     <script>
-    let numbi = prompt(`Escreva um número binário.`)
-    console.log(numbi)
-    console.log(numbi.length)
+    let numbi = parseInt(prompt(`Informe o número binário a ser convertido.`));
+        
+    let numdec = parseInt(numdec, 2);
 
-    for (let i = 0; i < numbi.length; i++) {
-        let numdec = (2 ** i) * numbi
-
-        document.write(`<p> ${numdec} </p>`)
-    }
-    
+    document.write(`<p>O número binário ${numbi} é ${numdec} em número decimal. </p>`)
     </script>
 </body>
 </html>

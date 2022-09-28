@@ -1,1 +1,52 @@
-<!-- Crie um algortimo que recebe informações de 15 produtos. Cada produto possui nome, marca, uma foto (link de uma imagem da internet), preço unitário e a quantidade de produtos em estoque. Ao receber essas informações dos produtos, imprima no HTML essas informações de cada produto e o produto entre o preço e a quantidade de produtos em estoque (preço total). -->
+<!-- 
+Crie um algortimo que recebe informações de 15 produtos.
+
+Cada produto possui nome, marca, uma foto (link de uma imagem da internet), preço unitário e a quantidade de produtos em estoque. 
+
+Ao receber essas informações dos produtos, imprima no HTML essas informações de cada produto e o produto entre o preço e a quantidade de produtos em estoque (preço total). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      let produtonome = []
+      let produtomarca = []
+      let produtofoto = []
+      let precoUnitario = []
+      let produtoquantidadeProduto = []
+      let produtoprecoTotal = []
+
+      for (let i=1; i <=15; i++){
+        let produtonome = prompt(`Digite o nome do produto nº ${i}?`)
+
+        let produtomarca = prompt(`Digite a marca do produto nº ${i}?`)
+
+        let produtofoto = prompt(`Digite o link da imagem do produto nº ${i}`)
+
+        let produtoprecoUnitario = parseFloat(prompt(`Digite o valor do produto nº ${i}?`))
+
+        let produtoquantidadeProduto = parseInt(prompt(`Digite a quantidade do produto em estoque`))
+
+        let produtoprecoTotal = produtoprecoUnitario * produtoquantidadeProduto
+
+        document.write(`
+            <p> Nome do Produto: ${produtonome} </p>
+            <p> Marca: ${produtomarca} </p>
+            <p> Imagem : <img src="${produtofoto} alt="produto" width="250"> </p>
+            <p> Preço: ${produtoprecoUnitario} </p>
+            <p> Estoque: ${produtoquantidadeProduto} </p>
+            <p> Valor Total do estoque:${produtoprecoTotal} </p>
+            <hr/>
+             `)
+
+    }
+    
+    </script>
+</body>
+</html>
